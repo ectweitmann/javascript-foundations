@@ -4,13 +4,13 @@ class Direwolf {
     this.starksToProtect = [];
     this.huntsWhiteWalkers = true;
 
-    if (size === undefined) {
+    if (!size) {
       this.size = "Massive";
     } else {
       this.size = size;
     }
 
-    if (home === undefined) {
+    if (!home) {
       this.home = "Beyond the Wall";
     } else {
       this.home = home;
