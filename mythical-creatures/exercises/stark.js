@@ -1,19 +1,14 @@
 const Direwolf = require('../exercises/direwolf');
 
 class Stark {
-  constructor({name: name, area: location} = {}) {
+  constructor({name, area} = {}) {
     this.name = name;
+    this.location = area || 'Winterfell';
     this.safe = false;
-
-    if (location === undefined) {
-      this.location = "Winterfell"
-    } else {
-    this.location = location;
-    }
   }
 
   sayHouseWords() {
-    if (this.safe === false) {
+    if (!this.safe) {
       return "Winter is Coming";
     } else {
       return "The North Remembers";
